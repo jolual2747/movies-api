@@ -43,6 +43,12 @@ def delete_a_movie():
     else:
         print(f"Error en la solicitud: {response.status_code} - {response.text}")
 
-update_a_movie()
-post_a_movie()
-delete_a_movie()
+# update_a_movie()
+# post_a_movie()
+# delete_a_movie()
+
+from config.database import session
+from app.models.movie import MovieModel
+from fastapi.encoders import jsonable_encoder
+db = session()
+print(jsonable_encoder(db.query(MovieModel).filter(MovieModel.category == 'Accion').all()))

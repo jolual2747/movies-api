@@ -4,7 +4,7 @@ from config.database import base
 from sqlalchemy import Column, Integer, String, Float
 
 class Movie(BaseModel):
-    id: Optional[int]
+    id: Optional[int] = None
     title: str = Field(min_length=5, max_length=15)
     overview: str = Field(min_length=15, max_length=50)
     year: int  = Field(le = 2022)
