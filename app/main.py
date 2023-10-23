@@ -17,8 +17,6 @@ routers = [movie_router, login_router]
 for router in routers:
     app.include_router(router)
 
-
-
 @app.get("/", tags=["home"])
 def message():
     return HTMLResponse("<h1>Hello world</h1>")

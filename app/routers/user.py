@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from fastapi.responses import JSONResponse
-from app.middlewares.jwt_bearer import create_token
+from app.utils.jwt_bearer import create_token
 from app.schemas.user import User
 
 login_router = APIRouter()

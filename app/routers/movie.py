@@ -5,7 +5,7 @@ from fastapi.encoders import jsonable_encoder
 from app.models.movie import MovieModel
 from app.schemas.movie import Movie
 from config.database import session
-from app.middlewares.jwt_bearer import JWTBearer
+from app.utils.jwt_bearer import JWTBearer
 from app.services.movie import MovieService
 
 movie_router = APIRouter()
